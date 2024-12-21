@@ -34,20 +34,34 @@ public class MountainDAOImpl implements MountainDAO {
 
 	@Override
 	public MountainClimbed create(MountainClimbed newMountain) {
+		em.persist(newMountain);
+		em.flush();
 		
-		return null;
+		return newMountain;
 	}
 
 	@Override
 	public MountainClimbed update(int showId, MountainClimbed updatingMountain) {
-//		em.find(null, updatingMountain)
-		return null;
+		MountainClimbed managedMt = em.find(MountainClimbed.class, showId);
+		managedMt.setMountainName(updatingMountain.getMountainName());
+		em.persist(managedMt);
+		em.flush();
+		
+		return updatingMountain;
 	}
 
 	@Override
 	public boolean deleteById(int showId) {
-//		em.remove(em);
-		return false;
+		MountainClimbed managedMt = em.find(MountainClimbed.class, showId);
+		try {
+			em.remove(managedMt);
+			em.flush();
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		
+		return true;
 	}
 
 }
