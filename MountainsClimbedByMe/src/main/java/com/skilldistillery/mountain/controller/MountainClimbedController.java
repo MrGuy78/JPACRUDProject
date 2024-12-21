@@ -26,7 +26,9 @@ public class MountainClimbedController {
 		MountainClimbed mountainClimbed = mtDao.findById(showId);
 		model.addAttribute("mountainClimbed", mountainClimbed);
 		
-		return null;
+		return "showMt";
 	}
+	
+	
 
 }
