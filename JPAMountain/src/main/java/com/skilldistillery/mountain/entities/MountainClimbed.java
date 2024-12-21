@@ -33,7 +33,7 @@ public class MountainClimbed {
 	private String location;
 	
 	@Column(name="deaths_upon")
-	private int deathsUpon;
+	private Integer deathsUpon;
 
 	public MountainClimbed() {
 		super();
@@ -88,11 +88,11 @@ public class MountainClimbed {
 		this.location = location;
 	}
 
-	public int getDeathsUpon() {
+	public Integer getDeathsUpon() {
 		return deathsUpon;
 	}
 
-	public void setDeathsUpon(int deathsUpon) {
+	public void setDeathsUpon(Integer deathsUpon) {
 		this.deathsUpon = deathsUpon;
 	}
 	
