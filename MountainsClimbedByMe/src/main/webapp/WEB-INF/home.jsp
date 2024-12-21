@@ -26,15 +26,14 @@
 	<tbody>
 	<c:forEach items="${showList}" var="mountainClimbed">
 	<tr>
-	  <td><a href=""</td>
-	  <td>${mountainClimbed.name}</td>
+	  <td><a href="getMountain.do?showId=${mountainClimbed.id}"></a></td>
+	  <td>${mountainClimbed.id}</td>
+	  <td>${mountainClimbed.mountainName}</td>
 	  <td>${mountainClimbed.elevation}</td>
 	  <td>${mountainClimbed.firstSummit}</td>
 	  <td>${mountainClimbed.mySummit}</td>
 	  <td>${mountainClimbed.location}</td>
 	  <td>${mountainClimbed.deathsUpon}</td>
-	  <td>${}</td>
-	  <td>${}</td>
 	</tr>
 	</c:forEach>
 	</tbody>
