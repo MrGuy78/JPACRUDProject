@@ -11,7 +11,7 @@
 <jsp:include page="bootstrapHeader.jsp"></jsp:include>
 </head>
 <body>
-	<button type="button">
+	<button type="button" class="btn btn-outline-dark btn-small">
 	<a href="home.do">Home</a>
 	</button>
 
