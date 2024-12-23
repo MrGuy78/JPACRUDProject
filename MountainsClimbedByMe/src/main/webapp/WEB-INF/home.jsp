@@ -1,16 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-        <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+        
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Mountains Climbed By Me</title>
+<jsp:include page="bootstrapHeader.jsp"></jsp:include>
 </head>
 <body>
 	<h1>A random assortment of mountains atop of which I've stood.</h1>
 	
-<div>
+<div class="container-fluid">
   <table class="table table-striped table-hover">
     <thead class="table-primary">
     <tr>
@@ -38,5 +40,6 @@
 	</tbody>
   </table>
 </div>
+<jsp:include page="bootstrapFooter.jsp"></jsp:include>
 </body>
 </html>
