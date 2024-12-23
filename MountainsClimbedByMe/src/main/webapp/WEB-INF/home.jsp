@@ -10,8 +10,9 @@
 <jsp:include page="bootstrapHeader.jsp"></jsp:include>
 </head>
 <body>
+  <div class="container-fluid">
 	<h1>A random assortment of mountains atop of which I've stood.</h1>
-	
+  </div>
 <div class="container-fluid">
   <table class="table table-striped table-hover">
     <thead class="table-primary">

@@ -11,27 +11,23 @@
 <jsp:include page="bootstrapHeader.jsp"></jsp:include>
 </head>
 <body>
-	<a href="getMountain.do">Home</a>
+	<button type="button">
+	<a href="home.do">Home</a>
+	</button>
 
-<c:choose>
-  <c:when test="${empty mountainClimbed}">
-	<h3>No Mountain Here (Kansas?)</h3>
-  </c:when>
-    <otherwise>
-      <div>
+      <div class="container-fluid">
 		<h2>${mountainClimbed.mountainName}</h2>
 		<ul>
-		  <li>${mountainClimbed.id}</li>
-		  <li>${mountainClimbed.elevation}</li>
-		  <li>${mountainClimbed.firstSummit}</li>
-		  <li>${mountainClimbed.mySummit}</li>
-		  <li>${mountainClimbed.location}</li>
-		  <li>${mountainClimbed.deathsUpon}</li>
+		  <li>ID #: <strong>${mountainClimbed.id}</strong></li>
+		  <li>Elevation (ft): <strong>${mountainClimbed.elevation}</strong></li>
+		  <li>First summit date: <strong>${mountainClimbed.firstSummit}</strong></li>
+		  <li>My summit date: <strong>${mountainClimbed.mySummit}</strong></li>
+		  <li>GPS: <strong>${mountainClimbed.location}</strong></li>
+		  <li>Deaths on the Mt: <strong>${mountainClimbed.deathsUpon}</strong></li>
 		</ul>
 	</div>
-	</otherwise>
-</c:choose>
-
+<%-- 	  <td><a href="https://maps.google.com/?q=47°53′51″N, 90°33′36″W">${mountainClimbed.location}</a></td>
+ --%>
 
 <jsp:include page="bootstrapFooter.jsp"></jsp:include>
 </body>
