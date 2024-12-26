@@ -21,12 +21,24 @@ public class MountainClimbedController {
 		model.addAttribute("showList", mtDao.findAll());
 		return "home";
 	}
+	
 	@RequestMapping(path = "getMountain.do", method = RequestMethod.GET)
 	public String mountain(Model model, @RequestParam("showId") Integer showId) {
 		MountainClimbed mountainClimbed = mtDao.findById(showId);
 		model.addAttribute("mountainClimbed", mountainClimbed);
-		
 		return "showMt";
 	}
 	
+	public String createMountain(Model model, MountainClimbed newMountain) {
+		MountainClimbed newOne = mtDao.create(newMountain);
+		model.addAttribute("newMountain", newOne);
+		return "showMt";
+	}
+	
+	@RequestMapping(path = "getMountain.do", method = RequestMethod.POST)
+	public String updateMountain(Model model, @RequestParam("showId") Integer showId) {
+//		MountainClimbed newMountain = mtDao.update
+		
+		return null;
+	}
 }
