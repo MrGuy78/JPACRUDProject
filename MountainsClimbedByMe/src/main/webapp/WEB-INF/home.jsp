@@ -41,9 +41,11 @@
 	</tbody>
   </table>
 </div>
+<div>
 	<button>
 		<a href="addMt.do">Add a Mt</a>
 	</button>
+</div>
 <jsp:include page="bootstrapFooter.jsp"></jsp:include>
 </body>
 </html>
