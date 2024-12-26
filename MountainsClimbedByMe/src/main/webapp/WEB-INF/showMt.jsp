@@ -11,10 +11,11 @@
 <jsp:include page="bootstrapHeader.jsp"></jsp:include>
 </head>
 <body>
-	<button type="button" class="btn btn-outline-dark btn-small">
+  <div>
+	<button>
 	<a href="home.do">Home</a>
 	</button>
-
+ </div>
       <div class="container-fluid">
 		<h2>${mountainClimbed.mountainName}</h2>
 		<ul>
