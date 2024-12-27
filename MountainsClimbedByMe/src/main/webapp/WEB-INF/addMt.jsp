@@ -10,7 +10,7 @@
 <jsp:include page="bootstrapHeader.jsp"></jsp:include>
 </head>
 <body>
-	<h1>${newMountain}</h1>
+	<h1>a mountain</h1>
 	
 <jsp:include page="bootstrapFooter.jsp"></jsp:include>
 </body>
