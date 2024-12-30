@@ -10,7 +10,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="mountain_climbed")
+@Table(name = "mountain_climbed")
+
 public class MountainClimbed {
 	
 	@Id

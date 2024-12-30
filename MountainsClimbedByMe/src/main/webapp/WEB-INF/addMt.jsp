@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
     
 <!DOCTYPE html>
 <html>
@@ -10,7 +10,7 @@
 <jsp:include page="bootstrapHeader.jsp"></jsp:include>
 </head>
 <body>
-	<form action= "addMt.do" method= "POST">
+  <form action= "addMt.do" method= "POST">
   <div class="container-fluid">
 	<h1>Add New Mountain</h1>
 	<p>
@@ -23,7 +23,7 @@
 	<button type= "submit" value= "Add Mountain">Add Mountain</button>
 	</p>
   </div>
-	</form>
+  </form>
 <button>
 <a href="home.do">Home</a>
 </button>
