@@ -29,13 +29,17 @@ public class MountainClimbedController {
 		return "showMt";
 	}
 	
-	@RequestMapping(path = "addMt.do", method = RequestMethod.POST)
+	@RequestMapping(path = "addMt.do", method = RequestMethod.GET)
 	public String createMountain(Model model, MountainClimbed newMountain) {
-		MountainClimbed newOne = mtDao.create(newMountain);
-		model.addAttribute("newMountain", newOne);
+		model.addAttribute("newMountain", new MountainClimbed());
 		return "addMt";
 	}
 	
+//	public String addMountain(Model model) {
+//		MountainClimbed newOne = mtDao.create(newMountain);
+//		
+//		return null;
+//	}
 //	@RequestMapping(path = "getMountain.do", method = RequestMethod.POST)
 //	public String updateMountain(Model model, @RequestParam("showId") Integer showId) {
 //		MountainClimbed newMountain = mtDao.update

@@ -50,9 +50,9 @@ public class MountainDAOImpl implements MountainDAO {
 
 	@Override
 	public boolean deleteById(int showId) {
-		MountainClimbed managedMt = em.find(MountainClimbed.class, showId);
+		MountainClimbed deletedMt = em.find(MountainClimbed.class, showId);
 		try {
-			em.remove(managedMt);
+			em.remove(deletedMt);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return false;
