@@ -10,6 +10,7 @@
 <jsp:include page="bootstrapHeader.jsp"></jsp:include>
 </head>
 <body>
+  <form action= "updateMt.do" method= "POST"></form>
 	<h1>Let's get those facts straight, shall we?</h1>
 
 
