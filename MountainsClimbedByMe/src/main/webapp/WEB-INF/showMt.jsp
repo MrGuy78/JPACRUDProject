@@ -6,14 +6,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset= "UTF-8">
 <title>Your chosen mountain</title>
 <jsp:include page="bootstrapHeader.jsp"></jsp:include>
 </head>
 <body>
   <div>
 	<button>
-	<a href="home.do">Home</a>
+	<a href= "home.do">Home</a>
 	</button>
  </div>
       <div class="container-fluid">
@@ -27,9 +27,9 @@
 		  <li>Deaths on the Mt: <strong>${mountainClimbed.deathsUpon}</strong></li>
 		</ul>
 	</div>
-<%-- 	  <td><a href="https://maps.google.com/?q=47°53′51″N, 90°33′36″W">${mountainClimbed.location}</a></td>
- --%>
-
+<button>
+<a href= "updateMt.do">Update</a>
+</button>
 <jsp:include page="bootstrapFooter.jsp"></jsp:include>
 </body>
 </html>

@@ -1,5 +1,6 @@
 package com.skilldistillery.mountain.entities;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
@@ -25,10 +26,10 @@ public class MountainClimbed {
 	private int elevation;
 	
 	@Column(name="first_summit")
-	private LocalDateTime firstSummit;
+	private LocalDate firstSummit;
 	
 	@Column(name="my_summit")
-	private LocalDateTime mySummit;
+	private LocalDate mySummit;
 	
 	@Column(name="location")
 	private String location;
@@ -56,7 +57,6 @@ public class MountainClimbed {
 		this.mountainName = mountainName;
 	}
 
-
 	public int getElevation() {
 		return elevation;
 	}
@@ -65,19 +65,19 @@ public class MountainClimbed {
 		this.elevation = elevation;
 	}
 
-	public LocalDateTime getFirstSummit() {
+	public LocalDate getFirstSummit() {
 		return firstSummit;
 	}
 
-	public void setFirstSummit(LocalDateTime firstSummit) {
+	public void setFirstSummit(LocalDate firstSummit) {
 		this.firstSummit = firstSummit;
 	}
 
-	public LocalDateTime getMySummit() {
+	public LocalDate getMySummit() {
 		return mySummit;
 	}
 
-	public void setMySummit(LocalDateTime mySummit) {
+	public void setMySummit(LocalDate mySummit) {
 		this.mySummit = mySummit;
 	}
 
