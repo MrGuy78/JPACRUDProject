@@ -56,15 +56,15 @@ public class MountainClimbedController {
 		return "showMt";
 	}
 	
-	@RequestMapping(path = "", method = RequestMethod.GET)
-	public String goDeleteMountain(Model model, @RequestParam("showId") Integer showId) {
-		
-		return null;
-	}
-	
-	@RequestMapping(path = "", method = RequestMethod.POST)
-	public String deleteMountain(Model model) {
-		
-		return null;
-	}
+//	@RequestMapping(path = "", method = RequestMethod.GET)
+//	public String goDeleteMountain(Model model, @RequestParam("showId") Integer showId) {
+//		
+//		return null;
+//	}
+//	
+//	@RequestMapping(path = "", method = RequestMethod.POST)
+//	public String deleteMountain(Model model) {
+//		
+//		return null;
+//	}
 }
