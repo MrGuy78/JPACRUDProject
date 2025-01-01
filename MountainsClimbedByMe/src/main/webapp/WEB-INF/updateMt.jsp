@@ -14,6 +14,7 @@
   <div class="container-fluid">
 	<h1>Let's get those facts straight, shall we?</h1>
 	<p>
+		  <input type="hidden" name="id" value="${updatingMountain.id}">
 	Name: <input type= "text" name= "mountainName" value= "${updatingMountain.mountainName}" required /><br>
 	Elevation: <input type= "text" name= "elevation" value= "${updatingMountain.elevation}" /><br>
 	First Summit: <input type= "date" name= "firstSummit" value= "${updatingMountain.firstSummit}" /><br>

@@ -23,7 +23,6 @@ public class MountainDAOImpl implements MountainDAO {
 	public List<MountainClimbed> findAll() {
 		String jpql = "SELECT m FROM MountainClimbed m";
 		List<MountainClimbed> results = em.createQuery(jpql, MountainClimbed.class).getResultList();
-		
 		return results;
 	}
 
@@ -35,16 +34,21 @@ public class MountainDAOImpl implements MountainDAO {
 	@Override
 	public MountainClimbed create(MountainClimbed newMountain) {
 		em.persist(newMountain);
-		
 		return newMountain;
 	}
 
 	@Override
 	public MountainClimbed update(int showId, MountainClimbed updatingMountain) {
 		MountainClimbed managedMt = em.find(MountainClimbed.class, showId);
-		managedMt.setMountainName(updatingMountain.getMountainName());
-		em.persist(managedMt);
-		
+		if (managedMt != null) {
+			managedMt.setMountainName(updatingMountain.getMountainName());
+			managedMt.setElevation(updatingMountain.getElevation());
+			managedMt.setFirstSummit(updatingMountain.getFirstSummit());
+			managedMt.setMySummit(updatingMountain.getMySummit());
+			managedMt.setLocation(updatingMountain.getLocation());
+			managedMt.setDeathsUpon(updatingMountain.getDeathsUpon());
+			em.persist(managedMt);
+		}
 		return updatingMountain;
 	}
 
@@ -57,7 +61,6 @@ public class MountainDAOImpl implements MountainDAO {
 			e.printStackTrace();
 			return false;
 		}
-		
 		return true;
 	}
 
