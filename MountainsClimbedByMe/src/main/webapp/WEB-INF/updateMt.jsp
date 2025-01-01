@@ -10,7 +10,7 @@
 <jsp:include page="bootstrapHeader.jsp"></jsp:include>
 </head>
 <body>
-  <form action= "updateMt.do" method= "POST"></form>
+  <form action= "updateMt.do" method= "POST">
   <div class="container-fluid">
 	<h1>Let's get those facts straight, shall we?</h1>
 	<p>
@@ -23,6 +23,7 @@
 	<button type= "submit" value= "Update Mountain">Update Mountain</button>
 	</p>
   </div>
+  </form>
 <button>
 <a href="home.do">Home</a>
 </button>

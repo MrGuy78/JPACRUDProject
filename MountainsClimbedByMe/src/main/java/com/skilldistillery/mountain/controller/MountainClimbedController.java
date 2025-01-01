@@ -57,7 +57,7 @@ public class MountainClimbedController {
 	}
 	
 	@RequestMapping(path = "", method = RequestMethod.GET)
-	public String goDeleteMountain(Model model) {
+	public String goDeleteMountain(Model model, @RequestParam("showId") Integer showId) {
 		
 		return null;
 	}
