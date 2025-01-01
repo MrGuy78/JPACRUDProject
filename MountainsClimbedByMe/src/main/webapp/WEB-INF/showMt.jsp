@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
             
-            
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +27,7 @@
 		</ul>
 	</div>
 <button>
-<a href= "updateMt.do">Update</a>
+<a href="updateMt.do?showId=${mountainClimbed.id}">Update</a>
 </button>
 <jsp:include page="bootstrapFooter.jsp"></jsp:include>
 </body>

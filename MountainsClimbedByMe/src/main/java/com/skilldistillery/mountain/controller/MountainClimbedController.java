@@ -35,17 +35,36 @@ public class MountainClimbedController {
 		return "addMt";
 	}
 	
-	@RequestMapping(path = "newMt.do", method = RequestMethod.POST)
+	@RequestMapping(path = "addMt.do", method = RequestMethod.POST)
 	public String addMountain(Model model, MountainClimbed newMountain) {
 		MountainClimbed newOne = mtDao.create(newMountain);
 		model.addAttribute("newMountain", newOne);
 		return "newMt";
 	}
 	
-	@RequestMapping(path = "updateMt.do", method = RequestMethod.POST)
+	@RequestMapping(path = "updateMt.do", method = RequestMethod.GET)
 	public String updateMountain(Model model, @RequestParam("showId") Integer showId) {
-		MountainClimbed newMountain = mtDao.findById(showId);
-		model.addAttribute("updatingMountain", newMountain);
+		MountainClimbed updatedMountain = mtDao.findById(showId);
+		model.addAttribute("updatingMountain", updatedMountain);
 		return "updateMt";
+	}
+	
+	@RequestMapping(path = "updateMt.do", method = RequestMethod.POST)
+	public String updateMountain2(Model model, MountainClimbed updatedMountain) {
+		mtDao.update(updatedMountain.getId(), updatedMountain);
+		model.addAttribute("mountainClimbed", updatedMountain);
+		return "showMt";
+	}
+	
+	@RequestMapping(path = "", method = RequestMethod.GET)
+	public String goDeleteMountain(Model model) {
+		
+		return null;
+	}
+	
+	@RequestMapping(path = "", method = RequestMethod.POST)
+	public String deleteMountain(Model model) {
+		
+		return null;
 	}
 }

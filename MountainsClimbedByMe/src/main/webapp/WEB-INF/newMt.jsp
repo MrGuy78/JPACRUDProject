@@ -10,6 +10,7 @@
 <jsp:include page="bootstrapHeader.jsp"></jsp:include>
 </head>
 <body>
+  <form action= "addMt.do" method= "POST"></form>
   <div class="container-fluid">
   <h2>Congrats on your latest summit!</h2>
 	<ul>

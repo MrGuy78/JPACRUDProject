@@ -11,11 +11,21 @@
 </head>
 <body>
   <form action= "updateMt.do" method= "POST"></form>
+  <div class="container-fluid">
 	<h1>Let's get those facts straight, shall we?</h1>
-
-
-
-
+	<p>
+	Name: <input type= "text" name= "mountainName" value= "${updatingMountain.mountainName}" required /><br>
+	Elevation: <input type= "text" name= "elevation" value= "${updatingMountain.elevation}" /><br>
+	First Summit: <input type= "date" name= "firstSummit" value= "${updatingMountain.firstSummit}" /><br>
+	My Summit: <input type= "date" name= "mySummit" value= "${updatingMountain.mySummit}" /><br>
+	Location: <input type= "text" name= "location" value= "${updatingMountain.location}" /><br>
+	Deaths Upon: <input type= "text" name= "deathsUpon" value= "${updatingMountain.deathsUpon}" /><br>
+	<button type= "submit" value= "Update Mountain">Update Mountain</button>
+	</p>
+  </div>
+<button>
+<a href="home.do">Home</a>
+</button>
 
 <jsp:include page="bootstrapFooter.jsp"></jsp:include>
 </body>
