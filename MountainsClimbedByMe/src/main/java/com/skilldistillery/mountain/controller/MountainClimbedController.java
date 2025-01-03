@@ -56,13 +56,6 @@ public class MountainClimbedController {
 		return "showMt";
 	}
 	
-//	@RequestMapping(path = "deleteMt.do", method = RequestMethod.GET)
-//	public String goDeleteMountain(Model model, @RequestParam("showId") Integer showId) {
-//		MountainClimbed goneMountain = mtDao.findById(showId);
-//		model.addAttribute("deletingMountain", );
-//		return null;
-//	}
-	
 	@RequestMapping(path = "deleteMt.do", method = RequestMethod.POST)
 	public String goDeleteMountain(Model model, @RequestParam("showId") Integer showId) {
 		boolean mountainGone = mtDao.deleteById(showId);

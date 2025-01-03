@@ -27,9 +27,12 @@
 		</ul>
 	</div>
 <button>
-<a href="updateMt.do?showId=${mountainClimbed.id}">Update</a>
-<a href="deleteMt.do?showId=${mountainClimbed.id}">Delete</a>
+<a href= "updateMt.do?showId=${mountainClimbed.id}">Update</a>
 </button>
+<button>
+<a href= "deleteMt.do?showId=${mountainClimbed.id}">Delete</a>
+</button>
+
 <jsp:include page="bootstrapFooter.jsp"></jsp:include>
 </body>
 </html>
