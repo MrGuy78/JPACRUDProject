@@ -29,8 +29,8 @@
 	<tbody>
 	<c:forEach items="${showList}" var="mountainClimbed">
 	<tr>
-	  <td>${mountainClimbed.id}</td>
-	  <td><a href="getMountain.do?showId=${mountainClimbed.id}">${mountainClimbed.mountainName}</a></td>
+	  <td><a href="getMountain.do?showId=${mountainClimbed.id}">${mountainClimbed.id}</a></td>
+	  <td>${mountainClimbed.mountainName}</td>
 	  <td>${mountainClimbed.elevation}</td>
 	  <td>${mountainClimbed.firstSummit}</td>
 	  <td>${mountainClimbed.mySummit}</td>
@@ -42,10 +42,10 @@
   </table>
 </div>
 <div>
-	<button>
-		<a href="addMt.do">Add a Mt</a>
-	</button>
-</div>
+<button>
+	<a href="addMt.do">Add a Mt</a>
+</button>
+
 <jsp:include page="bootstrapFooter.jsp"></jsp:include>
 </body>
 </html>

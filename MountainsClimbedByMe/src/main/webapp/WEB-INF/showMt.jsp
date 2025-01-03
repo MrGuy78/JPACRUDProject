@@ -29,9 +29,10 @@
 <button>
 <a href= "updateMt.do?showId=${mountainClimbed.id}">Update</a>
 </button>
-<button>
-<a href= "deleteMt.do?showId=${mountainClimbed.id}">Delete</a>
-</button>
+<form action="deleteMt.do" method="POST">
+    <input type="hidden" name="showId" value="${mountainClimbed.id}" />
+    <button type="submit">Delete</button>
+</form>
 
 <jsp:include page="bootstrapFooter.jsp"></jsp:include>
 </body>

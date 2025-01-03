@@ -60,7 +60,7 @@ public class MountainClimbedController {
 	public String goDeleteMountain(Model model, @RequestParam("showId") Integer showId) {
 		boolean mountainGone = mtDao.deleteById(showId);
 		if (mountainGone) {
-			return "home";
+			return "redirect:home.do";
 		} else {
 			return "error";
 		}
