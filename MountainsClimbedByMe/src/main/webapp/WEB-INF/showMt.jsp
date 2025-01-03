@@ -11,9 +11,8 @@
 </head>
 <body>
   <div>
-	<button>
-	<a href= "home.do">Home</a>
-	</button>
+<a href="home.do" class= "button-link">
+	<button type= "button" class= "button">Home</button></a>
  </div>
       <div class="container-fluid">
 		<h2>${mountainClimbed.mountainName}</h2>
@@ -26,13 +25,19 @@
 		  <li>Deaths on the Mt: <strong>${mountainClimbed.deathsUpon}</strong></li>
 		</ul>
 	</div>
-<button>
-<a href= "updateMt.do?showId=${mountainClimbed.id}">Update</a>
-</button>
+
+<div>
+<a href="updateMt.do?showId=${mountainClimbed.id}" class="button-link">
+    <button type="button" class="button">Update</button>
+</a>
+</div>
+
+<div>
 <form action="deleteMt.do" method="POST">
     <input type="hidden" name="showId" value="${mountainClimbed.id}" />
     <button type="submit">Delete</button>
 </form>
+</div>
 
 <jsp:include page="bootstrapFooter.jsp"></jsp:include>
 </body>

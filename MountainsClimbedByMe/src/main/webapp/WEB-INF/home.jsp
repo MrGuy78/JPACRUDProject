@@ -19,7 +19,7 @@
     <tr>
       <td>ID</td>
       <td>Name</td>
-      <td>Elevation</td>
+      <td>Elevation (ft)</td>
       <td>First Summit</td>
       <td>My Summit</td>
       <td>Location</td>
@@ -30,8 +30,7 @@
 	<c:forEach items="${showList}" var="mountainClimbed">
 	<tr>
 	  <td><a href="getMountain.do?showId=${mountainClimbed.id}">${mountainClimbed.id}</a></td>
-	  <td>${mountainClimbed.mountainName}</td>
-	  <td>${mountainClimbed.elevation}</td>
+	  <td><a href="getMountain.do?showId=${mountainClimbed.id}">${mountainClimbed.mountainName}</a></td>	  <td>${mountainClimbed.elevation}</td>
 	  <td>${mountainClimbed.firstSummit}</td>
 	  <td>${mountainClimbed.mySummit}</td>
 	  <td>${mountainClimbed.location}</td>
@@ -41,10 +40,11 @@
 	</tbody>
   </table>
 </div>
+
 <div>
-<button>
-	<a href="addMt.do">Add a Mt</a>
-</button>
+	<a href="addMt.do" class= "button-link">
+	<button type= "button" class= "button">Add a Mt</button></a>
+</div>
 
 <jsp:include page="bootstrapFooter.jsp"></jsp:include>
 </body>

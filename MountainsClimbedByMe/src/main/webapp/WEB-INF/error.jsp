@@ -15,9 +15,12 @@
 	<h2>You ain't from around here, is ya?</h2>
 
 	</div>
-<button>
-<a href= "home.do">Home</a>
-</button>
+
+<div>
+<a href="home.do" class= "button-link">
+	<button type= "button" class= "button">Home</button></a>
+</div>
+	
 <jsp:include page="bootstrapFooter.jsp"></jsp:include>
 </body>
 </html>
